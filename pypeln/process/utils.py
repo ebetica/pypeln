@@ -1,5 +1,4 @@
-import multiprocessing
-import multiprocessing.synchronize
+import torch.multiprocessing as multiprocessing
 import typing as tp
 
 from pypeln import utils as pypeln_utils

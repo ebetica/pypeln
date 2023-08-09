@@ -1,4 +1,4 @@
-import multiprocessing
+import torch.multiprocessing as multiprocessing
 import sys
 import traceback
 import typing as tp

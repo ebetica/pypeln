@@ -1,6 +1,6 @@
 import abc
 import functools
-import multiprocessing
+import torch.multiprocessing as multiprocessing
 import threading
 import time
 import typing as tp
