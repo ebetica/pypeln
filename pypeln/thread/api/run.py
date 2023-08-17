@@ -12,7 +12,7 @@ from .to_iterable import to_iterable
 from .to_stage import to_stage
 
 
-def run(*stages: tp.Union[Stage[A], tp.Iterable[A]], maxsize: int = 0) -> None:
+def run(*stages: tp.Union[Stage[A], tp.Iterable[A]], maxsize: int = 5) -> None:
     """
     Iterates over one or more stages until their iterators run out of elements.
 

@@ -15,7 +15,7 @@ class Concat(ApplyProcess):
 
 
 def concat(
-    stages: tp.List[tp.Union[Stage[A], tp.Iterable[A]]], maxsize: int = 0
+    stages: tp.List[tp.Union[Stage[A], tp.Iterable[A]]], maxsize: int = 5
 ) -> Stage:
     """
     Concatenates / merges many stages into a single one by appending elements from each stage in order, that is, it yields an element from the frist stage, then an element from the second stage and so on until it reaches the last stage and starts again. When a stage has no more elements its taken out of the process.

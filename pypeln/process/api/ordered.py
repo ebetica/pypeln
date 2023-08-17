@@ -23,13 +23,13 @@ class Ordered(tp.NamedTuple):
 @tp.overload
 def ordered(
     stage: Stage[A],
-    maxsize: int = 0,
+    maxsize: int = 5,
 ) -> Stage[A]:
     ...
 
 
 @tp.overload
-def ordered(maxsize: int = 0) -> pypeln_utils.Partial[Stage[A]]:
+def ordered(maxsize: int = 5) -> pypeln_utils.Partial[Stage[A]]:
     ...
 
 
@@ -37,7 +37,7 @@ def ordered(
     stage: tp.Union[
         Stage[A], tp.Iterable[A], pypeln_utils.Undefined
     ] = pypeln_utils.UNDEFINED,
-    maxsize: int = 0,
+    maxsize: int = 5,
 ) -> tp.Union[Stage[A], pypeln_utils.Partial[Stage[A]]]:
     """
     Creates a stage that sorts its elements based on their order of creation on the source iterable(s) of the pipeline.

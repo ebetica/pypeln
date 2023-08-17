@@ -37,7 +37,7 @@ def filter(
     f: FilterFn,
     stage: tp.Union[Stage[A], tp.Iterable[A], tp.AsyncIterable[A]],
     workers: int = 1,
-    maxsize: int = 0,
+    maxsize: int = 5,
     timeout: float = 0,
     on_start: tp.Callable = None,
     on_done: tp.Callable = None,
@@ -49,7 +49,7 @@ def filter(
 def filter(
     f: FilterFn,
     workers: int = 1,
-    maxsize: int = 0,
+    maxsize: int = 5,
     timeout: float = 0,
     on_start: tp.Callable = None,
     on_done: tp.Callable = None,
@@ -63,7 +63,7 @@ def filter(
         Stage[A], tp.Iterable[A], tp.AsyncIterable[A], pypeln_utils.Undefined
     ] = pypeln_utils.UNDEFINED,
     workers: int = 1,
-    maxsize: int = 0,
+    maxsize: int = 5,
     timeout: float = 0,
     on_start: tp.Callable = None,
     on_done: tp.Callable = None,

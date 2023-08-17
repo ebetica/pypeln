@@ -30,14 +30,14 @@ class FromIterable(tp.NamedTuple):
 
 @tp.overload
 def from_iterable(
-    iterable: tp.Iterable[T], use_thread: bool = True, maxsize: int = 0
+    iterable: tp.Iterable[T], use_thread: bool = True, maxsize: int = 5
 ) -> Stage[T]:
     ...
 
 
 @tp.overload
 def from_iterable(
-    use_thread: bool = True, maxsize: int = 0
+    use_thread: bool = True, maxsize: int = 5
 ) -> pypeln_utils.Partial[Stage[T]]:
     ...
 
@@ -45,7 +45,7 @@ def from_iterable(
 def from_iterable(
     iterable: tp.Union[tp.Iterable[T], pypeln_utils.Undefined] = pypeln_utils.UNDEFINED,
     use_thread: bool = True,
-    maxsize: int = 0,
+    maxsize: int = 5,
 ) -> tp.Union[Stage[T], pypeln_utils.Partial[Stage[T]]]:
     """
     Creates a stage from an iterable.

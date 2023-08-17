@@ -30,7 +30,7 @@ def flat_map(
     f: FlatMapFn,
     stage: Stage[A],
     workers: int = 1,
-    maxsize: int = 0,
+    maxsize: int = 5,
     timeout: float = 0,
     on_start: tp.Callable = None,
     on_done: tp.Callable = None,
@@ -42,7 +42,7 @@ def flat_map(
 def flat_map(
     f: FlatMapFn,
     workers: int = 1,
-    maxsize: int = 0,
+    maxsize: int = 5,
     timeout: float = 0,
     on_start: tp.Callable = None,
     on_done: tp.Callable = None,
@@ -56,7 +56,7 @@ def flat_map(
         Stage[A], tp.Iterable[A], pypeln_utils.Undefined
     ] = pypeln_utils.UNDEFINED,
     workers: int = 1,
-    maxsize: int = 0,
+    maxsize: int = 5,
     timeout: float = 0,
     on_start: tp.Callable = None,
     on_done: tp.Callable = None,

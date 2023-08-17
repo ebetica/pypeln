@@ -9,7 +9,7 @@ from ..stage import Stage
 @tp.overload
 def to_iterable(
     stage: tp.Union[Stage[A], tp.Iterable[A]],
-    maxsize: int = 0,
+    maxsize: int = 5,
     return_index: bool = False,
 ) -> tp.Iterable[A]:
     ...
@@ -17,7 +17,7 @@ def to_iterable(
 
 @tp.overload
 def to_iterable(
-    maxsize: int = 0,
+    maxsize: int = 5,
     return_index: bool = False,
 ) -> pypeln_utils.Partial[tp.Iterable[A]]:
     ...
@@ -27,7 +27,7 @@ def to_iterable(
     stage: tp.Union[
         Stage[A], tp.Iterable[A], pypeln_utils.Undefined
     ] = pypeln_utils.UNDEFINED,
-    maxsize: int = 0,
+    maxsize: int = 5,
     return_index: bool = False,
 ) -> tp.Union[tp.Iterable[A], pypeln_utils.Partial[tp.Iterable[A]]]:
     """

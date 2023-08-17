@@ -15,7 +15,7 @@ PipelineException = pypeln_utils.PipelineException
 
 
 class IterableQueue(asyncio.Queue, tp.Generic[T], tp.Iterable[T]):
-    def __init__(self, maxsize: int = 0, total_sources: int = 1):
+    def __init__(self, maxsize: int = 5, total_sources: int = 1):
         super().__init__(maxsize=maxsize)
 
         self.namespace = utils.Namespace(
